@@ -6,6 +6,7 @@ There's lots of good writeups elsewhere on the web about PDS hosting:
 - https://cprimozic.net/notes/posts/notes-on-self-hosting-bluesky-pds-alongside-other-services/
 - https://benharri.org/bluesky-pds-without-docker/ 
 - https://rafaeleyng.github.io/self-hosting-a-bluesky-pds-and-using-your-domain-as-your-handle
+- https://char.lt/blog/2024/10/atproto-pds/
 
 You can use any of these as inspiration for documenting your own deployments.
 
