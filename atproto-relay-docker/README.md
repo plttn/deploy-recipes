@@ -105,8 +105,8 @@ You can verify that it is running by going to the domain in your browser.
 **Prerequisite**
 
 - Install ``goat``: https://github.com/bluesky-social/goat
-- Install ``shuf``
-- Install ``parallel``
+- Install ``shuf``: https://linux.die.net/man/1/shuf
+- Install ``parallel``: https://linux.die.net/man/1/parallel
 
 > [!CAUTION]
 > It is [recommended to increase the "new-hosts-per-day" limit temporarily before continuing with the next steps](https://github.com/bluesky-social/indigo/blob/main/cmd/relay/README.md#bootstrapping-host-list).
