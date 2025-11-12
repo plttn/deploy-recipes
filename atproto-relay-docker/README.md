@@ -7,14 +7,9 @@ First and foremost, I would like to give credit to [Fig](https://bsky.app/profil
 
 See [Bryan's writeup for the kind of hardware you'll need for this](https://whtwnd.com/bnewbold.net/3lo7a2a4qxg2l) but you can definitely [run a Relay on a Raspberry Pi](https://whtwnd.com/futur.blue/3lkubavdilf2m).
 
-For my Relay I ended up going with OVH with these specs:
+A relay that's non-archival can usually run pretty efficiently on commodity hardware. For CPU and RAM, it can run fine on about 2-4 CPU cores and 4 GB of RAM. For bandwidth you'll need at least a 200 Mbps unmetered connection.
 
-- OS: Ubuntu Server 24.04 "Noble Numbat" LTS
-- CPU: Intel Xeon-D 1520 - 4c/8t - 2.2 GHz/2.6 GHz
-- RAM: 32 GB ECC 2133 MHz
-- HDD: 2×2 TB HDD SATA
-
-Way more than what I need but only costs about $24 CAD a month.
+Disk space will greatly depend on the backfill window you set and also depends on the network traffic for that window. A 48h backfill window can take up around 200-400GB of disk space.
 
 # Setup
 
@@ -45,7 +40,7 @@ Then in your favourite text editor, open the ``.env`` file, we'll walk through w
 
 ``RELAY_LENIENT_SYNC_VALIDATION`` - If true, allow legacy upstreams which don't implement atproto sync v1.1. Would recommend to set this to ``true``
 
-``RELAY_REPLAY_WINDOW`` - The duration of output "backfill window", eg 24h. Basically how much data the Relay stores and for how long. ``48h`` is what I have mine set as and it takes up about 200-300GB of disk space.
+``RELAY_REPLAY_WINDOW`` - The duration of output "backfill window", eg 24h. Basically how much data the Relay stores and for how long.
 
 ``RELAY_PERSIST_DIR`` - Where on the host machine the data is persisted. You can decide where you want this to be but I've left it as ``/data/relay/persist``. 
 
