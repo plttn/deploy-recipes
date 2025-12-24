@@ -14,11 +14,13 @@ Use `pds.env` and tweak as necessary, being sure to set `PDS_JWT_SECRET`,
 
 I keep `pds.env` in `/opt/pds/pds.env` to help keep my root directory clean.
 
+Once the quadlets are in the right folder, run `sudo systemctl daemon-reload` to
+pick up the new files, then `sudo systemctl start pds.pod` to bring the PDS up.
+
 Update your reverse proxy (in this example, Caddy) to use the tls-check endpoint
 and reverse proxy traffic.
 
-Also included is a slightly patched version of `pdsadmin` that ensures it won't
-ever try to update a deployment that doesn't exist.
+You should be all set now.
 
 ## Assumptions
 
